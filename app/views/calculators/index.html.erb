@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang = "en">
+<html>
+    <head>
+    <%= csrf_meta_tags%>
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+    <title>A simple calculator</title>
+    </head>
+
+    <body>
+        <div id= "container" >
+            <div id = "calculator">
+                <%= render 'calculators/calculator' %>
+            </div>
+            <div id = 'calculations'>
+                <div id ='title'>
+                    <h2>Calculation History</h2>
+                </div>
+                <% @calculations.each do |calculation| %>
+                    <%= render 'calculators/calculation', calculation: calculation %>
+                <% end %>
+            </div> 
+        </div>
+    </body>
+</html>
