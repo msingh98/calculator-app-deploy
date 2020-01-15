@@ -70,7 +70,8 @@ Rails.application.configure do
 
   #heroku websocket
   config.web_socket_server_url = "wss://shrouded-sea-35843.herokuapp.com/cable" 
-  config.action_cable.allowed_request_origins = ['https://shrouded-sea-35843.herokuapp.com', 'http://shrouded-sea-35843.herokuapp.com']
+  config.action_cable.allowed_request_origins = ['https://shrouded-sea-35843.herokuapp.com', 'http://shrouded-sea-35843.herokuapp.com'
+            'https://shrouded-sea-35843.herokuapp.com/calculators', 'http://shrouded-sea-35843.herokuapp.com/calculators']
 
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
