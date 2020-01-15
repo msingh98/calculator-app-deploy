@@ -68,6 +68,11 @@ Rails.application.configure do
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
+  #heroku websocket
+  config.web_socket_server_url = "wss://shrouded-sea-35843.herokuapp.com/cable" 
+  config.action_cable.allowed_request_origins = ['https://shrouded-sea-35843.herokuapp.com', 'http://shrouded-sea-35843.herokuapp.com']
+
+
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
